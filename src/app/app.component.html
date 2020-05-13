@@ -1,1 +1,6 @@
-Inicio
+<section *ngIf="isDesktopDevice">
+  <router-outlet></router-outlet>
+</section>
+<section *ngIf="isMobile || isTablet">
+  <h1>Esta aplicación solo esta disponible para DESKTOP</h1>
+</section>
