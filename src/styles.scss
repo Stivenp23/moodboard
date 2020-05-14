@@ -2,6 +2,9 @@
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 body{
   width: 100%;
   height: 100vh;
@@ -56,6 +59,7 @@ p{
   font-weight: bold;
   margin-top: 50px;
   text-transform: uppercase;
+  cursor: pointer;
   &:hover{
     border: 1px solid black;
     background-color: white;

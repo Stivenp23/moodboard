@@ -1,0 +1,64 @@
+<section class="select-images">
+  <div class="container">
+    <div class="content">
+      <h1>Visualiza tu concepto clave funcional</h1>
+      <p class="keyword">
+        “ebanistería”
+      </p>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
+          <div class="content">
+            <p class="text-left">
+              Si no te convencen las
+              imágenes que este repertorio,
+              puedes subir una
+              imagen de tu prefencia que
+              tengas en tus posesión o
+              que encuentres en internet
+            </p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+          <div class="content">
+          Imagen seleccionado
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
+          <div class="content">
+            <div class="submit-image">
+              <input type="file" name="image"/>
+            </div>
+            <p class="text-right">
+              Incluso puedes crear tus
+              propias imágenes, ya sea
+              con dibujos, fotografías o lo
+              que se te ocurra que represente
+              mejor tu concepto
+              clave y subirlas
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="content-carousel">
+       <div class="content">
+         <owl-carousel-o [options]="customOptions">
+           <ng-template carouselSlide>Slide 1</ng-template>
+           <ng-template carouselSlide>Slide 2</ng-template>
+           <ng-template carouselSlide>Slide 3</ng-template>
+           <ng-template carouselSlide>Slide 4</ng-template>
+           <ng-template carouselSlide>Slide 5</ng-template>
+           <ng-template carouselSlide>Slide 6</ng-template>
+           <ng-template carouselSlide>Slide 7</ng-template>
+           <ng-template carouselSlide>Slide 8</ng-template>
+           <ng-template carouselSlide>Slide 9</ng-template>
+           <ng-template carouselSlide>Slide 10</ng-template>
+         </owl-carousel-o>
+       </div>
+      </div>
+      <div class="content-button">
+        <a class="button" [routerLink]="''">Continuar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
