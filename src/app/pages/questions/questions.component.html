@@ -1,0 +1,37 @@
+<div *ngIf="step <= words.length">
+  <h1>Evalúa este concepto clave {{item.title}}</h1>
+
+  <div class="word-questions" style="border: 1px solid black;" *ngFor="let word of words; let i = index;">
+    <ng-container *ngIf="step == (i + 1)">
+      <h3>{{word.name}}</h3>
+      <ul>
+        <li *ngFor="let quest of item.questions">
+          <strong>{{quest}}</strong>
+          <label>
+            <input type="checkbox">
+            NO
+          </label>
+          <label>
+            <input type="checkbox">
+            SI
+          </label>
+        </li>
+      </ul>
+      <button (click)="step = (step+1)">Continuar</button>
+    </ng-container>
+  </div>
+</div>
+
+<div *ngIf="step === (words.length + 1)">
+  <h1>Este es tu concepto clave {{item.title}} ganador</h1>
+  <h3>Sin embargo, si no estás de acuerdo, puedes elegir otro</h3>
+  <ul>
+    <li *ngFor="let word of words">
+      <label>
+        <input type="checkbox">
+        {{word.name}}
+      </label>
+    </li>
+  </ul>
+  <button (click)="continue()">Continuar</button>
+</div>

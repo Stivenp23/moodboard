@@ -1,0 +1,38 @@
+[
+  {
+    "id": "funcional",
+    "title": "Funcional",
+    "content": "El concepto clave funcional es uno de los tres conceptos necesarios para construir el moodboard clave. Este concepto clave busca precisar la función por la que tu negocio será reconocido, y ayuda a ubicarlo en un sector del mercado. Por ejemplo, el concepto clave funcional de Cocacola es Bebidas, el de McDonald's es comida rapida, el de CNN es noticias, el de Ford es automoviles, el de LG es electrodomésticos, Citibank es banca, y el de Zara es moda. Otros ejemplos de concepto clave funcional pueden ser: ferretería, veterinaria, carpintería, fruver, peluquería, sastrería, panadería, etc... Tu idea de negocio puede tener muchas funciones en este momento, la lluvia de ideas te ayudará a escribir todas las que tengas en mente. Luego puedes escoger la que quieras profundizar en tu negocio.",
+    "questions": [
+      "¿Esta palabra engloba lo quetu negocio hace o quierehacer?",
+      "¿Esta palabra engloba lo quetu negocio querrá hacer en elfuturo?",
+      "¿Esta palabra expresa mejorla función de tu negocio quesus sinónimos?",
+      "¿Conoces la definicón exactade esta palabra?",
+      "¿Esta palabra carece de connotaciones negativas fuertes?"
+    ]
+  },
+  {
+    "id": "social",
+    "title": "Social",
+    "content": "Este concepto clave busca precisar la característica de apariencia por la que tu negocio será más reconocido, y ayuda a definir su papel en la sociedad. Por ejemplo, el concepto clave social de Cocacola es jovialidad, el de Mtv es juventud, el de Hugo Boss es elegancia, el de Disney es infantil, el de Lego es creativo, Facebook es sociable, y el de Zara es glamuroso. Otros ejemplos de concepto clave social pueden ser: Inteligente, fuerte, confiable, nutritivo, atractivo, resistente, Cool, etc... Tu idea de negocio puede aparentar muchas características, y la lluvia de ideas te ayudará a escribir todas las que tengas en mente. Luego puedes escoger la que quieras profundizar en tu negocio.",
+    "questions": [
+      "¿Esta palabra engloba lo quetu negocio hace o quierehacer?",
+      "¿Esta palabra engloba lo quetu negocio querrá hacer en elfuturo?",
+      "¿Esta palabra expresa mejorla función de tu negocio quesus sinónimos?",
+      "¿Conoces la definicón exactade esta palabra?",
+      "¿Esta palabra carece de connotaciones negativas fuertes?"
+    ]
+  },
+  {
+    "id": "emocional",
+    "title": "Emocional",
+    "content": "El concepto clave emocional es el último conceptos necesario para construir el moodboard clave. Este concepto clave busca precisar la emoción que tu negocio hace sentir a sus usuarios, y ayuda a definir su papel en la vida de las personas. Por ejemplo, el concepto clave emocional de Cocacola es felicidad, el de Mtv es viveza, el de Hugo Boss es exclusivo, el de CNN es informado, el de Zara es a la moda, Citibank es seguro. Otros ejemplos de concepto clave emocional pueden ser: amado, útil, responsable, admirado, tranquilo, satisfacción, superior, etc... Tu idea de negocio puede hacer sentir muchas emociones, y la lluvia de ideas te ayudará a escribir todas las que tengas en mente. Luego puedes escoger la que quieras profundizar en tu negocio.",
+    "questions": [
+      "¿Esta palabra engloba lo quetu negocio hace o quierehacer?",
+      "¿Esta palabra engloba lo quetu negocio querrá hacer en elfuturo?",
+      "¿Esta palabra expresa mejorla función de tu negocio quesus sinónimos?",
+      "¿Conoces la definicón exactade esta palabra?",
+      "¿Esta palabra carece de connotaciones negativas fuertes?"
+    ]
+  }
+]

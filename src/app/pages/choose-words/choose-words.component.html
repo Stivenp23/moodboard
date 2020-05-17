@@ -1,0 +1,13 @@
+<h1>Encuentra tu concepto clave {{item.title}}</h1>
+<h3>selecciona máximo tres palabras</h3>
+<div>
+  <ul>
+    <li *ngFor="let word of words; let i = index">
+      <label>
+        <input [(ngModel)]="word.selected" type="checkbox" [disabled]="getSelecteds().length === 3 && word.selected === false">
+        {{word.name}}
+      </label>
+    </li>
+  </ul>
+</div>
+<button (click)="submit()" [disabled]="getSelecteds().length !== 3">Continuar</button>

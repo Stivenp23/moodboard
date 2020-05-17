@@ -1,0 +1,16 @@
+<h1>Lluvia de ideas</h1>
+<h3>Escribe tantas palabras como puedas</h3>
+<div>
+  <div>
+    <ul>
+      <li *ngFor="let word of words">{{word}}</li>
+    </ul>
+  </div>
+  <form [formGroup]="wordsForm" (ngSubmit)="addWord()">
+    <input formControlName="word">
+    <button type="submit" [disabled]="!wordsForm.valid">-></button>
+  </form>
+  <ng-container [counter]="counter" [interval]="1000" (value)="setCounter($event)" [after]="3">
+    <span> {{ count }} </span>
+  </ng-container>
+</div>

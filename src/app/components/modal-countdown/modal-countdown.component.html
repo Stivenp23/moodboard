@@ -1,6 +1,8 @@
 <div class="modal-body">
   <h2>PREPARATE</h2>
   <div class="countdown">
-    ¡3.. 2.. 1..!
+    <ng-container [counter]="counter" [interval]="1000" (value)="count = $event">
+      <span> {{ count }} </span>
+    </ng-container>
   </div>
 </div>
