@@ -1,3 +1,9 @@
-<h1>Encuentra tu concepto clave {{item.title}}</h1>
-<div>{{item.content}}</div>
-<button routerLink="/lluvia-de-ideas/iniciar/{{item.id}}">Continuar</button>
+<section class="brainstorming-intro">
+  <div class="container">
+    <div class="content">
+      <h1>Encuentra tu concepto clave <span class="word">{{item.title}}</span></h1>
+      <div [innerHTML]="item.content"></div>
+      <button class="button" routerLink="/lluvia-de-ideas/iniciar/{{item.id}}">Continuar</button>
+    </div>
+  </div>
+</section>

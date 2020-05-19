@@ -1,37 +1,49 @@
-<div *ngIf="step <= words.length">
-  <h1>Evalúa este concepto clave {{item.title}}</h1>
-
-  <div class="word-questions" style="border: 1px solid black;" *ngFor="let word of words; let i = index;">
-    <ng-container *ngIf="step == (i + 1)">
-      <h3>{{word.name}}</h3>
+<section class="content-container questions">
+  <div class="container margen">
+    <div *ngIf="step <= words.length">
+      <h1>Evalúa este concepto clave <span class="word">{{item.title}}</span></h1>
+      <div class="word-questions" *ngFor="let word of words; let i = index;">
+        <ng-container *ngIf="step == (i + 1)">
+          <h3>"{{word.name}}"</h3>
+          <div class="content-row margen">
+            <div class="row">
+              <div class="col-4" *ngFor="let quest of item.questions">
+                <div class="content">
+                 <h5>{{quest}}</h5>
+                 <div class="row options">
+                   <label class="col">
+                     <input name="res" type="radio">
+                     <div class="box">
+                       <span>NO</span>
+                     </div>
+                   </label>
+                   <label class="col">
+                     <input name="res" type="radio">
+                     <div class="box">
+                       <span>SI</span>
+                     </div>
+                   </label>
+                 </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="button" (click)="step = (step+1)">Continuar</button>
+        </ng-container>
+      </div>
+    </div>
+    <div *ngIf="step === (words.length + 1)">
+      <h1>Este es tu concepto clave {{item.title}} ganador</h1>
+      <h3>Sin embargo, si no estás de acuerdo, puedes elegir otro</h3>
       <ul>
-        <li *ngFor="let quest of item.questions">
-          <strong>{{quest}}</strong>
+        <li *ngFor="let word of words">
           <label>
             <input type="checkbox">
-            NO
-          </label>
-          <label>
-            <input type="checkbox">
-            SI
+            {{word.name}}
           </label>
         </li>
       </ul>
-      <button (click)="step = (step+1)">Continuar</button>
-    </ng-container>
+      <button (click)="continue()">Continuar</button>
+    </div>
   </div>
-</div>
-
-<div *ngIf="step === (words.length + 1)">
-  <h1>Este es tu concepto clave {{item.title}} ganador</h1>
-  <h3>Sin embargo, si no estás de acuerdo, puedes elegir otro</h3>
-  <ul>
-    <li *ngFor="let word of words">
-      <label>
-        <input type="checkbox">
-        {{word.name}}
-      </label>
-    </li>
-  </ul>
-  <button (click)="continue()">Continuar</button>
-</div>
+</section>
