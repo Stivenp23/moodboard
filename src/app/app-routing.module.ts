@@ -9,6 +9,7 @@ import {BrainstormingIntroComponent} from './pages/brainstorming-intro/brainstor
 import {PlayBrainstormingComponent} from './pages/play-brainstorming/play-brainstorming.component'
 import {ChooseWordsComponent} from './pages/choose-words/choose-words.component'
 import {QuestionsComponent} from './pages/questions/questions.component'
+import {VisualizeKeyConceptsComponent} from './pages/visualize-key-concepts/visualize-key-concepts.component'
 
 
 const routes: Routes = [
@@ -43,6 +44,10 @@ const routes: Routes = [
   {
     path: 'lluvia-de-ideas/preguntas/:id',
     component: QuestionsComponent
+  },
+  {
+    path: 'visualizar-conceptos-clave',
+    component: VisualizeKeyConceptsComponent,
   },
   {
     path: 'seleccion-de-imagenes',

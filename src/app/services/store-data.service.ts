@@ -51,4 +51,16 @@ export class StoreDataService {
   getSelectedWordsById(id) {
     return JSON.parse(localStorage.getItem('selected_' + id))
   }
+
+  setSelectedWord(id, word) {
+    localStorage.setItem('win_word_' + id, word)
+  }
+
+  getSelectedWord(id) {
+    return JSON.parse(localStorage.getItem('win_word_' + id))
+  }
+
+  clearLocalStore() {
+    localStorage.clear()
+  }
 }

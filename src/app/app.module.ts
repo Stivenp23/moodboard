@@ -23,7 +23,8 @@ import { ModalNumberWordsComponent } from './components/modal-number-words/modal
 import { BrainstormingIntroComponent } from './pages/brainstorming-intro/brainstorming-intro.component';
 import { PlayBrainstormingComponent } from './pages/play-brainstorming/play-brainstorming.component';
 import { ChooseWordsComponent } from './pages/choose-words/choose-words.component';
-import { QuestionsComponent } from './pages/questions/questions.component'
+import { QuestionsComponent } from './pages/questions/questions.component';
+import { VisualizeKeyConceptsComponent } from './pages/visualize-key-concepts/visualize-key-concepts.component'
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { QuestionsComponent } from './pages/questions/questions.component'
     BrainstormingIntroComponent,
     PlayBrainstormingComponent,
     ChooseWordsComponent,
-    QuestionsComponent
+    QuestionsComponent,
+    VisualizeKeyConceptsComponent
   ],
   imports: [
     FormsModule,
