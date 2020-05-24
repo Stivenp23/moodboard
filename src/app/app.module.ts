@@ -24,7 +24,8 @@ import { BrainstormingIntroComponent } from './pages/brainstorming-intro/brainst
 import { PlayBrainstormingComponent } from './pages/play-brainstorming/play-brainstorming.component';
 import { ChooseWordsComponent } from './pages/choose-words/choose-words.component';
 import { QuestionsComponent } from './pages/questions/questions.component';
-import { VisualizeKeyConceptsComponent } from './pages/visualize-key-concepts/visualize-key-concepts.component'
+import { VisualizeKeyConceptsComponent } from './pages/visualize-key-concepts/visualize-key-concepts.component';
+import { MoodboardImageComponent } from './components/moodboard-image/moodboard-image.component'
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { VisualizeKeyConceptsComponent } from './pages/visualize-key-concepts/vi
     PlayBrainstormingComponent,
     ChooseWordsComponent,
     QuestionsComponent,
-    VisualizeKeyConceptsComponent
+    VisualizeKeyConceptsComponent,
+    MoodboardImageComponent
   ],
   imports: [
     FormsModule,

@@ -1,9 +1,9 @@
 <section class="select-images">
-  <div class="container">
-    <div class="content">
-      <h1>Visualiza tu concepto clave funcional</h1>
+  <div class="container" *ngFor="let concept of concepts; let i = index;">
+    <div *ngIf="step === (i + 1)" class="content">
+      <h1>Visualiza tu concepto clave {{concept.title}}</h1>
       <p class="keyword">
-        “ebanistería”
+        “{{concept.word}}”
       </p>
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
@@ -19,14 +19,14 @@
           </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-          <div class="content">
-          Imagen seleccionado
+          <div class="content" *ngIf="selected_image.src">
+            <img [src]="concept.image.src" width="200">
           </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
           <div class="content">
             <div class="submit-image">
-              <input type="file" name="image"/>
+              <input type="file" (change)="handleUpload(concept, $event)" accept="image/x-png,image/jpeg"/>
             </div>
             <p class="text-right">
               Incluso puedes crear tus
@@ -40,23 +40,48 @@
         </div>
       </div>
       <div class="content-carousel">
-       <div class="content">
-         <owl-carousel-o [options]="customOptions">
-           <ng-template carouselSlide>Slide 1</ng-template>
-           <ng-template carouselSlide>Slide 2</ng-template>
-           <ng-template carouselSlide>Slide 3</ng-template>
-           <ng-template carouselSlide>Slide 4</ng-template>
-           <ng-template carouselSlide>Slide 5</ng-template>
-           <ng-template carouselSlide>Slide 6</ng-template>
-           <ng-template carouselSlide>Slide 7</ng-template>
-           <ng-template carouselSlide>Slide 8</ng-template>
-           <ng-template carouselSlide>Slide 9</ng-template>
-           <ng-template carouselSlide>Slide 10</ng-template>
-         </owl-carousel-o>
-       </div>
+        <div class="content">
+          <owl-carousel-o [options]="customOptions">
+            <ng-template *ngFor="let image of images" carouselSlide>
+              <img (click)="selectImage(concept, image, 'normal')" [src]="image">
+            </ng-template>
+          </owl-carousel-o>
+        </div>
       </div>
       <div class="content-button">
-        <a class="button" [routerLink]="''">Continuar</a>
+        <button class="button" (click)="next()" [disabled]="!concept.image">Continuar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" *ngIf="step === (concepts.length + 1)">
+    <div class="content">
+      <h1>Armemos tu Moodboard</h1>
+      <app-moodboard-image [concepts]="concepts"></app-moodboard-image>
+
+      <button class="button" (click)="next()">Continuar</button>
+    </div>
+  </div>
+
+  <div class="container" *ngIf="step === (concepts.length + 2)">
+    <div class="content">
+      <h1>Listo tu Moodboard clave</h1>
+      <div #screen>
+        <app-moodboard-image [concepts]="concepts"></app-moodboard-image>
+      </div>
+      <div id="download">
+        <img #canvas [hidden]="true">
+        <a #downloadLink></a>
+      </div>
+      <button class="button" (click)="downloadImage()">DESCARGAR</button>
+      <p>Esta valiosa herramienta de tu estrategia de marca, te ayudará a enfocar de
+        ahora en adelante todas las decisiones del negocio.</p>
+      <p>También tiene la ventaja de ayudar a poner en sintonía al equipo de trabajo,
+        y lograr que todos hablen el mismo lenguaje en cuanto a marca refiere.</p>
+      <p>Imprime tu moodboard y mantenlo a la vista para que influya
+        en cada acción que necesite tu negocio.</p>
+      <div class="content-button">
+        <a class="button">Continuar</a>
       </div>
     </div>
   </div>

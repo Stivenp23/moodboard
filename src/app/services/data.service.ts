@@ -38,6 +38,10 @@ export class DataService {
     return this.data.concepts[(indexOfCurrent + 1)]
   }
 
+  getAllConcepts() {
+    return this.data.concepts
+  }
+
   getImages() {
     return this.data.images
   }
