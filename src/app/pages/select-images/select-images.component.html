@@ -57,8 +57,33 @@
   <div class="container" *ngIf="step === (concepts.length + 1)">
     <div class="content">
       <h1>Armemos tu Moodboard</h1>
-      <app-moodboard-image [concepts]="concepts"></app-moodboard-image>
-
+      <app-moodboard-image [concepts]="concepts" [classSelected]="class_image"></app-moodboard-image>
+      <ul>
+        <li>
+          <label>
+            <input type="radio" name="class_select_image" value="option1" [(ngModel)]="class_image">
+            Opcion 1
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="radio" name="class_select_image" value="option2" [(ngModel)]="class_image">
+            Opcion 2
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="radio" name="class_select_image" value="option3" [(ngModel)]="class_image">
+            Opcion 3
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="radio" name="class_select_image" value="option4" [(ngModel)]="class_image">
+            Opcion 4
+          </label>
+        </li>
+      </ul>
       <button class="button" (click)="next()">Continuar</button>
     </div>
   </div>
@@ -67,7 +92,7 @@
     <div class="content">
       <h1>Listo tu Moodboard clave</h1>
       <div #screen>
-        <app-moodboard-image [concepts]="concepts"></app-moodboard-image>
+        <app-moodboard-image [concepts]="concepts" [classSelected]="class_image"></app-moodboard-image>
       </div>
       <div id="download">
         <img #canvas [hidden]="true">

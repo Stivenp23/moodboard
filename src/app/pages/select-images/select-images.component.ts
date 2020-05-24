@@ -42,6 +42,7 @@ export class SelectImagesComponent implements OnInit {
   id: string
   words: any = []
   step = 1
+  class_image = 'option1'
 
   @ViewChild('screen') screen: ElementRef
   @ViewChild('canvas') canvas: ElementRef

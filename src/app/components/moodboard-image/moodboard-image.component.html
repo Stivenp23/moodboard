@@ -1,4 +1,4 @@
-<div style="height: 300px">
+<div [ngClass]="classSelected" style="height: 300px">
   <div *ngFor="let concept of concepts" style="width: 200px; float: left">
     <img [src]="concept.image.src" width="200">
   </div>
