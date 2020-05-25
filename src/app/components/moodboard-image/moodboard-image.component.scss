@@ -3,12 +3,6 @@
   grid-template-columns: 130px 130px 130px;
   grid-template-rows: 130px 130px 130px;
   margin: 0 auto;
-  img{
-    width: 100%;
-    object-fit: cover;
-    height: 100%;
-    object-position: center;
-  }
   span{
     position: absolute;
     left: 1px;
@@ -23,6 +17,9 @@
   .content-arm{
     border: 1px solid #000000;
     position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
   &.option1 {
    .content-arm:nth-child(1){

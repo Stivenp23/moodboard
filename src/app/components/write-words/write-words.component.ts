@@ -14,7 +14,6 @@ export class WriteWordsComponent implements OnInit, OnDestroy {
   @Input() finalTextModal = ''
   @Input() modalToLink = ''
   @Output() wordsFinally: EventEmitter<any> = new EventEmitter<any>()
-
   modalOption: NgbModalOptions = {}
   words = []
   submitted = false;
@@ -26,13 +25,15 @@ export class WriteWordsComponent implements OnInit, OnDestroy {
     ]),
   })
 
-  counter = 10
+  counter = 20
   count = 0
 
   constructor(private modalService: NgbModal) {
   }
 
   ngOnInit(): void {
+    const inputTech: any = document.querySelector('input[name=word]');
+    inputTech.focus();
     this.coundown()
   }
 
@@ -55,7 +56,6 @@ export class WriteWordsComponent implements OnInit, OnDestroy {
   }
 
   addWord() {
-    console.log('Hola')
     this.submitted = true;
     this.words.push(this.word.value)
     this.resetWord()

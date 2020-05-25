@@ -33,7 +33,6 @@ export class PlayBrainstormingComponent implements OnInit {
 
   setDataWords(words) {
     this.dataStore.setWords(this.id, words)
-    console.log(this.dataStore.getWords())
   }
 
 }

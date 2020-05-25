@@ -4,23 +4,25 @@
       <h1>Lluvia de ideas</h1>
       <h3>Escribe tantas palabras como puedas</h3>
     </div>
-    <div class="content-row">
+    <div class="content-row word">
       <div class="row">
-        <div class="col-4" *ngFor="let word of words">
+        <div class="col-4" *ngFor="let word of words; let i= index">
           <div class="content">
-            {{word}}
+           <span> {{i+1}}.   {{word}}</span>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <form class="input-enter" [formGroup]="wordsForm" (ngSubmit)="addWord()">
-    <input formControlName="word" placeholder="Ingresa otra palabra">
-    <button type="submit" [disabled]="!wordsForm.valid"><img src="assets/images/enter.png"></button>
-  </form>
-  <ng-container [counter]="counter" [interval]="1000" (value)="setCounter($event)" [after]="3">
-    <div class="countdown-content">
-      <span class="countdown"> {{ count }} </span>
-    </div>
-  </ng-container>
+  <div class="container">
+    <form class="input-enter" [formGroup]="wordsForm" (ngSubmit)="addWord()">
+      <input name="word" formControlName="word" placeholder="Ingresa otra palabra" [autofocus]="true">
+      <button type="submit" [disabled]="!wordsForm.valid"><img src="assets/images/enter.png"></button>
+    </form>
+    <ng-container [counter]="counter" [interval]="1000" (value)="setCounter($event)" [after]="3">
+      <div class="countdown-content">
+        <span class="countdown"> {{ count }} </span>
+      </div>
+    </ng-container>
+  </div>
 </div>

@@ -26,15 +26,12 @@ export class DataService {
   findNextById(id) {
     const currentItem = this.findById(id)
     if (currentItem === null) {
-      console.log('actual no existe', id)
       return null
     }
     const indexOfCurrent = this.data.concepts.indexOf(currentItem)
     if (indexOfCurrent < 0) {
-      console.log('No se encontro el index del actual', indexOfCurrent)
       return null
     }
-    console.log('El index del proximo dato es', (indexOfCurrent + 1))
     return this.data.concepts[(indexOfCurrent + 1)]
   }
 

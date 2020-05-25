@@ -68,8 +68,9 @@
   <div class="container" *ngIf="step === (concepts.length + 1)">
     <div class="content select-option-img">
       <h1>Armemos tu Moodboard</h1>
+      <button class="button" (click)="downloadImage()" style="position: fixed; right: 10px; bottom: 0">DESCARGAR</button>
       <div class="container-center">
-        <div #screen style="background: red">
+        <div #screen>
           <app-moodboard-image [concepts]="concepts" [classSelected]="class_image"></app-moodboard-image>
         </div>
         <div id="download">
@@ -103,7 +104,6 @@
           </label>
         </div>
       </div>
-      <button class="button" (click)="downloadImage()">DESCARGAR</button>
       <button class="button not-margen" (click)="next()">Continuar</button>
     </div>
   </div>

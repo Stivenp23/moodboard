@@ -15,7 +15,6 @@ export class BrainstormingDemoComponent implements OnInit {
   }
 
   setDataWords(words) {
-    console.log(words)
   }
 
 }

@@ -1,6 +1,5 @@
 <div [ngClass]="classSelected" class="content-images">
-  <div *ngFor="let concept of concepts" class="content-arm">
-    <img [src]="concept.image.src">
+  <div *ngFor="let concept of concepts" class="content-arm" [ngStyle]="{backgroundImage: 'url(' + concept.image.src + ')'}">
     <span>{{concept.word}}</span>
   </div>
 </div>
