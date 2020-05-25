@@ -10,6 +10,18 @@
         "¿Esta palabra expresa mejor la función de tu negocio que sus sinónimos?",
         "¿Conoces la definicón exacta de esta palabra?",
         "¿Esta palabra carece de connotaciones negativas fuertes?"
+      ],
+      "images": [
+        "/assets/images/carrusel-funcional/funcional-1.jpg",
+        "/assets/images/carrusel-funcional/funcional-2.jpg",
+        "/assets/images/carrusel-funcional/funcional-3.jpg",
+        "/assets/images/carrusel-funcional/funcional-4.jpg",
+        "/assets/images/carrusel-funcional/funcional-5.jpg",
+        "/assets/images/carrusel-funcional/funcional-6.jpg",
+        "/assets/images/carrusel-funcional/funcional-7.jpg",
+        "/assets/images/carrusel-funcional/funcional-8.jpg",
+        "/assets/images/carrusel-funcional/funcional-9.jpg",
+        "/assets/images/carrusel-funcional/funcional-10.jpg"
       ]
     },
     {
@@ -22,6 +34,18 @@
         "¿Esta palabra explica mejor la apariencia de tu negocio que sus sinónimos?",
         "¿Conoces la definicón exacta de esta palabra?",
         "¿Esta palabra carece de connotaciones negativas fuertes?"
+      ],
+      "images": [
+        "/assets/images/carrusel-social/social-1.jpg",
+        "/assets/images/carrusel-social/social-2.jpg",
+        "/assets/images/carrusel-social/social-3.jpg",
+        "/assets/images/carrusel-social/social-4.jpg",
+        "/assets/images/carrusel-social/social-5.jpg",
+        "/assets/images/carrusel-social/social-6.jpg",
+        "/assets/images/carrusel-social/social-7.jpg",
+        "/assets/images/carrusel-social/social-8.jpg",
+        "/assets/images/carrusel-social/social-9.jpg",
+        "/assets/images/carrusel-social/social-10.jpg"
       ]
     },
     {
@@ -34,17 +58,19 @@
         "¿Esta palabra expresa mejor la emoción de tu público que sus sinónimos?",
         "¿Conoces la definicón exacta de esta palabra?",
         "¿Esta palabra carece de connotaciones negativas fuertes?"
+      ],
+      "images": [
+        "/assets/images/carrusel-emocional/emocional-1.jpg",
+        "/assets/images/carrusel-emocional/emocional-2.jpg",
+        "/assets/images/carrusel-emocional/emocional-3.jpg",
+        "/assets/images/carrusel-emocional/emocional-4.jpg",
+        "/assets/images/carrusel-emocional/emocional-5.jpg",
+        "/assets/images/carrusel-emocional/emocional-6.jpg",
+        "/assets/images/carrusel-emocional/emocional-7.jpg",
+        "/assets/images/carrusel-emocional/emocional-8.jpg",
+        "/assets/images/carrusel-emocional/emocional-9.jpg",
+        "/assets/images/carrusel-emocional/emocional-10.jpg"
       ]
     }
-  ],
-  "images": [
-    "/assets/images/1.jpg",
-    "/assets/images/2.jpg",
-    "/assets/images/3.jpg",
-    "/assets/images/4.jpg",
-    "/assets/images/5.jpg",
-    "/assets/images/6.jpg",
-    "/assets/images/7.jpg",
-    "/assets/images/8.jpg"
   ]
 }

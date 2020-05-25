@@ -1,6 +1,6 @@
 <div [ngClass]="classSelected" class="content-images">
   <div *ngFor="let concept of concepts" class="content-arm">
     <img [src]="concept.image.src">
-    <span>Palabra ganadora</span>
+    <span>{{concept.word}}</span>
   </div>
 </div>

@@ -53,7 +53,7 @@
       <div class="content-carousel">
         <div class="content">
           <owl-carousel-o [options]="customOptions">
-            <ng-template *ngFor="let image of images" carouselSlide>
+            <ng-template *ngFor="let image of concept.images" carouselSlide>
               <img (click)="selectImage(concept, image, 'normal')" [src]="image">
             </ng-template>
           </owl-carousel-o>
@@ -69,7 +69,13 @@
     <div class="content select-option-img">
       <h1>Armemos tu Moodboard</h1>
       <div class="container-center">
-        <app-moodboard-image [concepts]="concepts" [classSelected]="class_image"></app-moodboard-image>
+        <div #screen style="background: red">
+          <app-moodboard-image [concepts]="concepts" [classSelected]="class_image"></app-moodboard-image>
+        </div>
+        <div id="download">
+          <img #canvas [hidden]="true">
+          <a #downloadLink></a>
+        </div>
         <div class="row options">
           <label class="col-1">
             <input type="radio" name="class_select_image" value="option1" [(ngModel)]="class_image">
@@ -97,6 +103,7 @@
           </label>
         </div>
       </div>
+      <button class="button" (click)="downloadImage()">DESCARGAR</button>
       <button class="button not-margen" (click)="next()">Continuar</button>
     </div>
   </div>
@@ -104,13 +111,6 @@
   <div class="container" *ngIf="step === (concepts.length + 2)">
     <div class="content">
       <h1>Listo tu Moodboard clave</h1>
-     <div class="container-center">
-       <div id="download">
-         <img #canvas [hidden]="true">
-         <a #downloadLink></a>
-       </div>
-     </div>
-      <button class="button" (click)="downloadImage()">DESCARGAR</button>
       <p>Esta valiosa herramienta de tu estrategia de marca, te ayudará a enfocar de
         ahora en adelante todas las decisiones del negocio.</p>
       <p>También tiene la ventaja de ayudar a poner en sintonía al equipo de trabajo,
