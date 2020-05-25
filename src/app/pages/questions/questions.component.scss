@@ -6,41 +6,52 @@
     .content-row {
       .content {
         padding: 20px 0;
-        h5{
+
+        h5 {
 
         }
-        .options {
-          .col{
-            margin: 0 10px;
-            input{
-              display: none;
-              &:checked + .box{
-                background-color: #000000;
-                color: #ffffff;
-                transition: 1s;
-                .span{
-                  color: #000000;
-                }
-              }
-            }
-            .box{
-              width: 100%;
-              text-align: center;
-              cursor: pointer;
-              position: relative;
-              border-radius: 5px;
-              transition: 1s;
-              padding: 5px 0;
-              background-color: #e0e0e0;
-              span{
-                position: relative;
 
-              }
-            }
+        .options {
+          width: 70%;
+          margin: 0 auto;
+
+          .col {
+            margin: 0 10px;
           }
 
         }
       }
     }
+  }
+}
+
+::ng-deep .content-select{
+  margin: 30px auto;
+}
+input {
+  display: none;
+  &:checked + .box {
+    background-color: #000000;
+    color: #ffffff;
+    transition: 0.5s;
+    .span {
+      color: #000000;
+    }
+  }
+}
+
+.box {
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  border-radius: 5px;
+  transition: 1s;
+  padding: 5px 0;
+  background-color: #e0e0e0;
+
+  span {
+    position: relative;
+
   }
 }

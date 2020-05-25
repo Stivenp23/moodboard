@@ -37,14 +37,18 @@
     <div [hidden]="step < (words.length + 1)">
       <h1>Este es tu concepto clave {{item.title}} ganador</h1>
       <h3>Sin embargo, si no estás de acuerdo, puedes elegir otro</h3>
-      <ul>
-        <li *ngFor="let word of words">
-          <label>
+      <div class="content-select">
+        <div class="row options">
+          <label class="col-4" *ngFor="let word of words">
             <input type="radio" name="selected_word" [(ngModel)]="selected_word" [value]="word.name">
-            {{word.name}}
+            <div class="box">
+              <span> {{word.name}}</span>
+            </div>
           </label>
-        </li>
-      </ul>
+        </div>
+
+      </div>
+
       <button class="button" (click)="continue()">Continuar</button>
     </div>
   </div>

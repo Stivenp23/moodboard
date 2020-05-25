@@ -14,9 +14,9 @@
       </div>
     </div>
   </div>
-  <form [formGroup]="wordsForm" (ngSubmit)="addWord()">
-    <input formControlName="word">
-    <button type="submit" [disabled]="!wordsForm.valid">-></button>
+  <form class="input-enter" [formGroup]="wordsForm" (ngSubmit)="addWord()">
+    <input formControlName="word" placeholder="Ingresa otra palabra">
+    <button type="submit" [disabled]="!wordsForm.valid"><img src="assets/images/enter.png"></button>
   </form>
   <ng-container [counter]="counter" [interval]="1000" (value)="setCounter($event)" [after]="3">
     <div class="countdown-content">

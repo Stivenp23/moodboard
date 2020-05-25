@@ -6,13 +6,13 @@
     </div>
     <div class="content-row margen">
       <div class="row">
-        <div class="col-4" *ngFor="let word of words; let i = index">
+        <div class="col-3" *ngFor="let word of words; let i = index">
           <div class="content">
-            <label>
-              <input [(ngModel)]="word.selected" type="checkbox"
+            <p>
+              <input [id]="'switch-' + i" [(ngModel)]="word.selected" type="checkbox" class="switch-input"
                      [disabled]="getSelecteds().length === 3 && word.selected === false">
-              {{word.name}}
-            </label>
+              <label [for]="'switch-' + i">{{word.name}}</label>
+            </p>
           </div>
         </div>
       </div>

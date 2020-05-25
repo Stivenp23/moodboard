@@ -17,11 +17,12 @@ export class WriteWordsComponent implements OnInit, OnDestroy {
 
   modalOption: NgbModalOptions = {}
   words = []
-
+  submitted = false;
   wordsForm = new FormGroup({
     word: new FormControl('', [
       Validators.required,
-      Validators.minLength(3)
+      Validators.minLength(3),
+      Validators.pattern('^[a-zA-ZñÑáéíóúÁÉÍÓÚ\\s]{3,30}$')
     ]),
   })
 
@@ -33,6 +34,10 @@ export class WriteWordsComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.coundown()
+  }
+
+  get f() {
+    return this.wordsForm.controls;
   }
 
   ngOnDestroy() {
@@ -50,6 +55,8 @@ export class WriteWordsComponent implements OnInit, OnDestroy {
   }
 
   addWord() {
+    console.log('Hola')
+    this.submitted = true;
     this.words.push(this.word.value)
     this.resetWord()
   }

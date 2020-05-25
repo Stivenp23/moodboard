@@ -20,16 +20,16 @@ export class SelectImagesComponent implements OnInit {
     navText: ['', ''],
     responsive: {
       0: {
-        items: 1
+        items: 3
       },
       400: {
-        items: 2
+        items: 3
       },
       740: {
         items: 6
       },
       940: {
-        items: 6
+        items: 8
       }
     },
     nav: true

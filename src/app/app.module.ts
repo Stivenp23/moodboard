@@ -26,7 +26,6 @@ import { ChooseWordsComponent } from './pages/choose-words/choose-words.componen
 import { QuestionsComponent } from './pages/questions/questions.component';
 import { VisualizeKeyConceptsComponent } from './pages/visualize-key-concepts/visualize-key-concepts.component';
 import { MoodboardImageComponent } from './components/moodboard-image/moodboard-image.component'
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,7 +55,7 @@ import { MoodboardImageComponent } from './components/moodboard-image/moodboard-
     NgbModule,
     DeviceDetectorModule.forRoot(),
     CarouselModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

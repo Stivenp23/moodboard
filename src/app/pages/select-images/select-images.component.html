@@ -19,14 +19,25 @@
           </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-          <div class="content" *ngIf="selected_image.src">
-            <img [src]="concept.image.src" width="200">
+          <div class="content content-image">
+            <ng-container *ngIf="selected_image.src; else noFound">
+              <img [src]="concept.image.src" width="200">
+            </ng-container>
+            <ng-template #noFound>
+              <div class="noFound">
+               <img src="assets/images/no-found.png">
+              </div>
+            </ng-template>
           </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
           <div class="content">
             <div class="submit-image">
-              <input type="file" (change)="handleUpload(concept, $event)" accept="image/x-png,image/jpeg"/>
+              <label for="file-upload" class="custom-file-upload">
+                <i class="fa fa-cloud-upload"></i> Subir Imagen
+              </label>
+              <input id="file-upload" type="file" class="custom-file-input" (change)="handleUpload(concept, $event)" accept="image/x-png,image/jpeg"/>
+
             </div>
             <p class="text-right">
               Incluso puedes crear tus
@@ -49,55 +60,56 @@
         </div>
       </div>
       <div class="content-button">
-        <button class="button" (click)="next()" [disabled]="!concept.image">Continuar</button>
+        <button class="button not-margen" (click)="next()" [disabled]="!concept.image">Continuar</button>
       </div>
     </div>
   </div>
 
   <div class="container" *ngIf="step === (concepts.length + 1)">
-    <div class="content">
+    <div class="content select-option-img">
       <h1>Armemos tu Moodboard</h1>
-      <app-moodboard-image [concepts]="concepts" [classSelected]="class_image"></app-moodboard-image>
-      <ul>
-        <li>
-          <label>
+      <div class="container-center">
+        <app-moodboard-image [concepts]="concepts" [classSelected]="class_image"></app-moodboard-image>
+        <div class="row options">
+          <label class="col-1">
             <input type="radio" name="class_select_image" value="option1" [(ngModel)]="class_image">
-            Opcion 1
+            <div class="box">
+              <span><img src="assets/images/forms/form-1.png"/></span>
+            </div>
           </label>
-        </li>
-        <li>
-          <label>
+          <label class="col-1">
             <input type="radio" name="class_select_image" value="option2" [(ngModel)]="class_image">
-            Opcion 2
+            <div class="box">
+              <span><img src="assets/images/forms/form-2.png"/></span>
+            </div>
           </label>
-        </li>
-        <li>
-          <label>
+          <label class="col-1">
             <input type="radio" name="class_select_image" value="option3" [(ngModel)]="class_image">
-            Opcion 3
+            <div class="box">
+              <span><img src="assets/images/forms/form-3.png"/></span>
+            </div>
           </label>
-        </li>
-        <li>
-          <label>
+          <label class="col-1">
             <input type="radio" name="class_select_image" value="option4" [(ngModel)]="class_image">
-            Opcion 4
+            <div class="box">
+              <span><img src="assets/images/forms/form-4.png"/></span>
+            </div>
           </label>
-        </li>
-      </ul>
-      <button class="button" (click)="next()">Continuar</button>
+        </div>
+      </div>
+      <button class="button not-margen" (click)="next()">Continuar</button>
     </div>
   </div>
 
   <div class="container" *ngIf="step === (concepts.length + 2)">
     <div class="content">
       <h1>Listo tu Moodboard clave</h1>
-      <div #screen>
-        <app-moodboard-image [concepts]="concepts" [classSelected]="class_image"></app-moodboard-image>
-      </div>
-      <div id="download">
-        <img #canvas [hidden]="true">
-        <a #downloadLink></a>
-      </div>
+     <div class="container-center">
+       <div id="download">
+         <img #canvas [hidden]="true">
+         <a #downloadLink></a>
+       </div>
+     </div>
       <button class="button" (click)="downloadImage()">DESCARGAR</button>
       <p>Esta valiosa herramienta de tu estrategia de marca, te ayudará a enfocar de
         ahora en adelante todas las decisiones del negocio.</p>
@@ -106,7 +118,7 @@
       <p>Imprime tu moodboard y mantenlo a la vista para que influya
         en cada acción que necesite tu negocio.</p>
       <div class="content-button">
-        <a class="button">Continuar</a>
+        <a class="button" [routerLink]="'/end'">Continuar</a>
       </div>
     </div>
   </div>
