@@ -1,4 +1,7 @@
 <section class="end demo">
+  <div class="arrow" (click)="back()">
+    <img src="assets/images/arrow.png" alt="Volver" title="Volver">
+  </div>
   <div class="container">
     <div class="content">
       <app-write-words (wordsFinally)="setDataWords($event)"></app-write-words>

@@ -14,6 +14,7 @@
 ::ng-deep .content-carousel{
   width: 90%;
   margin: 0 auto;
+  max-width: 740px;
 }
 ::ng-deep .owl-prev {
   &:after {
@@ -48,7 +49,7 @@
 ::ng-deep .select-images {
   .content-image {
     text-align: center;
-    min-height: 260px;
+    min-height: 360px;
     position: relative;
     padding: 10px 0;
 
@@ -63,7 +64,8 @@
 
       img {
         width: 100%;
-        max-width: 240px;
+        max-width: 350px;
+        max-height: 350px;
       }
     }
   }
@@ -97,13 +99,12 @@ input[type="file"] {
   }
   input {
     display: none;
-
     &:checked + .box {
       background-color: #ada8a8;
     }
   }
   .box {
-    width: 100%;
+    width: 45px;
     text-align: center;
     cursor: pointer;
     position: relative;

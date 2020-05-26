@@ -18,7 +18,9 @@ export class BrainstormingIntroComponent implements OnInit {
     this.id = this.route.snapshot.paramMap.get('id')
     this.loadDataItem(this.id)
   }
-
+  back() {
+    this.dataService.backClicked();
+  }
   loadDataItem(id) {
     this.item = this.dataService.findById(id)
     if (this.item === null) {

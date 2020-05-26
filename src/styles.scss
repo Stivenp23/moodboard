@@ -63,6 +63,16 @@ p {
     max-width: 500px;
   }
 }
+.arrow{
+  max-width: 30px;
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  cursor: pointer;
+  img{
+    width: 100%;
+  }
+}
 .button {
   background-color: #bfbdbd;
   color: black;

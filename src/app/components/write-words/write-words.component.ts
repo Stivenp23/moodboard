@@ -4,6 +4,7 @@ import {FormGroup, FormControl, Validators} from '@angular/forms'
 import {NgbModal, NgbModalOptions} from '@ng-bootstrap/ng-bootstrap'
 import {ModalNumberWordsComponent} from '../modal-number-words/modal-number-words.component'
 import {ModalCountdownComponent} from '../modal-countdown/modal-countdown.component'
+import {DataService} from "../../services/data.service";
 
 @Component({
   selector: 'app-write-words',
@@ -25,10 +26,10 @@ export class WriteWordsComponent implements OnInit, OnDestroy {
     ]),
   })
 
-  counter = 20
+  counter = 60
   count = 0
 
-  constructor(private modalService: NgbModal) {
+  constructor(private modalService: NgbModal, private location: DataService) {
   }
 
   ngOnInit(): void {
@@ -36,7 +37,9 @@ export class WriteWordsComponent implements OnInit, OnDestroy {
     inputTech.focus();
     this.coundown()
   }
-
+  back() {
+    this.location.backClicked();
+  }
   get f() {
     return this.wordsForm.controls;
   }

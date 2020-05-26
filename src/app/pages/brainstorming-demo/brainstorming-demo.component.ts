@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core'
+import {DataService} from "../../services/data.service";
 
 @Component({
   selector: 'app-brainstorming-demo',
@@ -7,13 +8,15 @@ import {Component, OnInit} from '@angular/core'
 })
 export class BrainstormingDemoComponent implements OnInit {
 
-  constructor() {
+  constructor(private location: DataService) {
   }
 
   ngOnInit(): void {
 
   }
-
+  back() {
+    this.location.backClicked();
+  }
   setDataWords(words) {
   }
 

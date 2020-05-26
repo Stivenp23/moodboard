@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core'
 import {NgbModal, NgbModalOptions} from '@ng-bootstrap/ng-bootstrap'
 import {ModalCountdownComponent} from '../../components/modal-countdown/modal-countdown.component'
 import {ModalWordsComponent} from '../../components/modal-words/modal-words.component'
+import {DataService} from "../../services/data.service";
 
 @Component({
   selector: 'app-brainstorming',
@@ -11,12 +12,14 @@ import {ModalWordsComponent} from '../../components/modal-words/modal-words.comp
 export class BrainstormingComponent implements OnInit {
   modalOption: NgbModalOptions = {}
 
-  constructor(private modalService: NgbModal) {
+  constructor(private modalService: NgbModal, private location: DataService) {
   }
 
   ngOnInit(): void {
   }
-
+  back() {
+    this.location.backClicked();
+  }
   coundown() {
     this.modalOption.backdrop = 'static'
     this.modalOption.keyboard = false

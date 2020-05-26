@@ -1,13 +1,13 @@
 import {Injectable} from '@angular/core'
 import data from '../../assets/data.json'
-
+import {Location} from "@angular/common";
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
   data: any = data
 
-  constructor() {
+  constructor(private _location: Location) {
   }
 
   findById(id) {
@@ -37,6 +37,9 @@ export class DataService {
 
   getAllConcepts() {
     return this.data.concepts
+  }
+  backClicked() {
+    this._location.back();
   }
 
   getImages() {

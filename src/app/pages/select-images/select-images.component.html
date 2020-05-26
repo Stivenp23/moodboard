@@ -20,14 +20,14 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
           <div class="content content-image">
-            <ng-container *ngIf="selected_image.src; else noFound">
-              <img [src]="concept.image.src" width="200">
-            </ng-container>
-            <ng-template #noFound>
-              <div class="noFound">
-               <img src="assets/images/no-found.png">
-              </div>
+            <div class="noFound">
+              <ng-container *ngIf="selected_image.src; else noFound">
+                <img [src]="concept.image.src" >
+              </ng-container>
+              <ng-template #noFound>
+                <img src="assets/images/no-found.png">
             </ng-template>
+            </div>
           </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
@@ -36,7 +36,8 @@
               <label for="file-upload" class="custom-file-upload">
                 <i class="fa fa-cloud-upload"></i> Subir Imagen
               </label>
-              <input id="file-upload" type="file" class="custom-file-input" (change)="handleUpload(concept, $event)" accept="image/x-png,image/jpeg"/>
+              <input id="file-upload" type="file" class="custom-file-input" (change)="handleUpload(concept, $event)"
+                     accept="image/x-png,image/jpeg"/>
 
             </div>
             <p class="text-right">
@@ -66,9 +67,13 @@
   </div>
 
   <div class="container" *ngIf="step === (concepts.length + 1)">
+    <div class="arrow" (click)="back()">
+      <img src="assets/images/arrow.png" alt="Volver" title="Volver">
+    </div>
     <div class="content select-option-img">
-      <h1>Armemos tu Moodboard</h1>
-      <button class="button" (click)="downloadImage()" style="position: fixed; right: 10px; bottom: 0">DESCARGAR</button>
+      <h1 style="    font-size: 36px; ">Armemos tu Moodboard</h1>
+      <button class="button" (click)="downloadImage()" style="position: fixed; right: 10px; bottom: 0">DESCARGAR
+      </button>
       <div class="container-center">
         <div #screen>
           <app-moodboard-image [concepts]="concepts" [classSelected]="class_image"></app-moodboard-image>
@@ -78,25 +83,25 @@
           <a #downloadLink></a>
         </div>
         <div class="row options">
-          <label class="col-1">
+          <label class="col-2">
             <input type="radio" name="class_select_image" value="option1" [(ngModel)]="class_image">
             <div class="box">
               <span><img src="assets/images/forms/form-1.png"/></span>
             </div>
           </label>
-          <label class="col-1">
+          <label class="col-2">
             <input type="radio" name="class_select_image" value="option2" [(ngModel)]="class_image">
             <div class="box">
               <span><img src="assets/images/forms/form-2.png"/></span>
             </div>
           </label>
-          <label class="col-1">
+          <label class="col-2">
             <input type="radio" name="class_select_image" value="option3" [(ngModel)]="class_image">
             <div class="box">
               <span><img src="assets/images/forms/form-3.png"/></span>
             </div>
           </label>
-          <label class="col-1">
+          <label class="col-2">
             <input type="radio" name="class_select_image" value="option4" [(ngModel)]="class_image">
             <div class="box">
               <span><img src="assets/images/forms/form-4.png"/></span>
@@ -109,6 +114,9 @@
   </div>
 
   <div class="container" *ngIf="step === (concepts.length + 2)">
+    <div class="arrow" (click)="back()">
+      <img src="assets/images/arrow.png" alt="Volver" title="Volver">
+    </div>
     <div class="content">
       <h1>Listo tu Moodboard clave</h1>
       <p>Esta valiosa herramienta de tu estrategia de marca, te ayudará a enfocar de

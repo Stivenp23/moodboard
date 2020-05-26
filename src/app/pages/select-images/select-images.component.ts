@@ -18,20 +18,7 @@ export class SelectImagesComponent implements OnInit {
     dots: false,
     navSpeed: 700,
     navText: ['', ''],
-    responsive: {
-      0: {
-        items: 3
-      },
-      400: {
-        items: 3
-      },
-      740: {
-        items: 6
-      },
-      940: {
-        items: 8
-      }
-    },
+    items: 8,
     nav: true
   }
 
@@ -70,6 +57,10 @@ export class SelectImagesComponent implements OnInit {
 
   next() {
     this.step++
+    this.selected_image = {}
+  }
+  back() {
+    this.step--
     this.selected_image = {}
   }
 
