@@ -37,24 +37,44 @@ p {
   font-size: 20px;
   line-height: 1.5;
 }
-.logo-float{
+
+.logo-float {
   position: fixed;
   bottom: 50px;
   left: 50px;
-  img{
+
+  img {
     width: 100%;
   }
 }
-.image-logo{
+
+.image-logo {
   margin: 25px auto;
   max-width: 140px;
-  img{
+
+  img {
     width: 100%;
   }
 }
+
 .text {
   margin: 10px 0 30px 0;
   max-width: 840px;
+}
+
+.text-max {
+  position: absolute;
+  left: 50px;
+  width: 330px;
+  top: 40%;
+  text-align: left;
+}
+.text-max-rig {
+  position: absolute;
+  right: 50px;
+  width: 330px;
+  top: 40%;
+  text-align: right;
 }
 
 .countdown-content {
@@ -73,21 +93,25 @@ p {
 .content-button {
   margin-top: 50px;
 }
-.content-row{
-  &.word{
+
+.content-row {
+  &.word {
     max-width: 500px;
   }
 }
-.arrow{
+
+.arrow {
   max-width: 30px;
   position: fixed;
   left: 20px;
   top: 20px;
   cursor: pointer;
-  img{
+
+  img {
     width: 100%;
   }
 }
+
 .button {
   background-color: #3636FF;
   color: white;
@@ -100,15 +124,19 @@ p {
   cursor: pointer;
   border: 1px solid transparent;
   transition: 0.5s;
-  &:disabled{
+
+  &:disabled {
     opacity: 0.4;
-    &:hover{
+
+    &:hover {
       cursor: no-drop;
     }
   }
-  &.not-margen{
+
+  &.not-margen {
     margin: 0;
   }
+
   &:hover {
     background-color: #70D6C3;
     color: white;

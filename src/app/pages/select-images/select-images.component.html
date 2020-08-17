@@ -64,8 +64,8 @@
       <img src="assets/images/arrow.png" alt="Volver" title="Volver">
     </div>
     <div class="content select-option-img">
-      <h1 style="    font-size: 36px; ">Armemos tu Tablero de Conceptos</h1>
-      <button class="button" (click)="downloadImage()" style="position: fixed; right: 10px; bottom: 0">DESCARGAR
+      <h1 style="    font-size: 36px; ">Armemos tu Tablero de Conceptos Clave</h1>
+      <button class="button" (click)="downloadImage()" style="position: fixed; right: 10px; bottom: 0;font-size: 15px;">DESCARGAR
       </button>
       <div class="container-center">
         <div #screen>
@@ -76,30 +76,37 @@
           <a #downloadLink></a>
         </div>
         <div class="row options">
-          <label class="col-2">
+          <label class="col-auto">
             <input type="radio" name="class_select_image" value="option1" [(ngModel)]="class_image">
             <div class="box">
               <span><img src="assets/images/forms/form-1.png"/></span>
             </div>
           </label>
-          <label class="col-2">
+          <label class="col-auto">
             <input type="radio" name="class_select_image" value="option2" [(ngModel)]="class_image">
             <div class="box">
               <span><img src="assets/images/forms/form-2.png"/></span>
             </div>
           </label>
-          <label class="col-2">
+          <label class="col-auto">
             <input type="radio" name="class_select_image" value="option3" [(ngModel)]="class_image">
             <div class="box">
               <span><img src="assets/images/forms/form-3.png"/></span>
             </div>
           </label>
-          <label class="col-2">
+          <label class="col-auto">
             <input type="radio" name="class_select_image" value="option4" [(ngModel)]="class_image">
             <div class="box">
               <span><img src="assets/images/forms/form-4.png"/></span>
             </div>
           </label>
+        </div>
+        <div class="text-max">
+          <p>Por favor <strong>maximiza la ventana del navegador</strong> al momento de descargar tu
+            Tablero de Conceptos Clave</p>
+        </div>
+        <div class="text-max-rig">
+          <p>Arma tu Tablero como desees y no olvides descargarlo.</p>
         </div>
       </div>
       <button class="button not-margen" (click)="next()">Continuar</button>

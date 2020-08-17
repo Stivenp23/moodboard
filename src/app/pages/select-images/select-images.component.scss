@@ -96,6 +96,9 @@ input[type="file"] {
   .options{
     justify-content: center;
     margin: 20px 0;
+    .col-2{
+      margin: 0;
+    }
   }
   input {
     display: none;

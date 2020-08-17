@@ -5,6 +5,7 @@ import {NgbModal, NgbModalOptions} from '@ng-bootstrap/ng-bootstrap'
 import {ModalNumberWordsComponent} from '../modal-number-words/modal-number-words.component'
 import {ModalCountdownComponent} from '../modal-countdown/modal-countdown.component'
 import {DataService} from "../../services/data.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-write-words',
@@ -26,10 +27,10 @@ export class WriteWordsComponent implements OnInit, OnDestroy {
     ]),
   })
 
-  counter = 10
+  counter = 60
   count = 0
 
-  constructor(private modalService: NgbModal, private location: DataService) {
+  constructor(private modalService: NgbModal, private location: DataService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -37,9 +38,11 @@ export class WriteWordsComponent implements OnInit, OnDestroy {
     inputTech.focus();
     this.coundown()
   }
+
   back() {
     this.location.backClicked();
   }
+
   get f() {
     return this.wordsForm.controls;
   }
@@ -88,7 +91,11 @@ export class WriteWordsComponent implements OnInit, OnDestroy {
     }
 
     if (this.modalToLink && this.modalToLink !== '') {
-      modalRef.componentInstance.toLink = this.modalToLink
+      if (this.words.length < 3) {
+        window.history.back()
+      } else {
+        modalRef.componentInstance.toLink = this.modalToLink
+      }
     } else {
       modalRef.componentInstance.toLink = '/lluvia-de-ideas/introduccion'
     }
