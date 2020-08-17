@@ -26,7 +26,7 @@ export class WriteWordsComponent implements OnInit, OnDestroy {
     ]),
   })
 
-  counter = 60
+  counter = 10
   count = 0
 
   constructor(private modalService: NgbModal, private location: DataService) {

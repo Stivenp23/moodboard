@@ -7,7 +7,7 @@ import {DeviceDetectorService} from 'ngx-device-detector';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'MoodBoard';
+  title = 'Tablero de Conceptos Clave';
   isMobile;
   isTablet;
   isDesktopDevice;

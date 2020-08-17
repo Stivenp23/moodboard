@@ -27,6 +27,7 @@ import { QuestionsComponent } from './pages/questions/questions.component';
 import { VisualizeKeyConceptsComponent } from './pages/visualize-key-concepts/visualize-key-concepts.component';
 import { MoodboardImageComponent } from './components/moodboard-image/moodboard-image.component'
 import {CommonModule} from "@angular/common";
+import {LogoFloatComponent} from "./components/logo-float/logo-float.component";
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import {CommonModule} from "@angular/common";
     ChooseWordsComponent,
     QuestionsComponent,
     VisualizeKeyConceptsComponent,
-    MoodboardImageComponent
+    MoodboardImageComponent,
+    LogoFloatComponent
   ],
   imports: [
     FormsModule,
